@@ -1,0 +1,371 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+header{
+    width: 100%;
+    margin: 0 auto;
+}
+.coursemosLogo {
+    width: 1280px;
+    margin: 0 auto;
+    height: 81px;
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 중앙정렬 */
+    align-items: center; /* 가운데 정렬 */
+    /* margin-left: auto 0px; */
+}
+.menubar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;    
+}
+.menubar > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.menubar > h3.gray {
+    color: #b4b4b4;
+}
+.menubar > h3.black {
+    color: #222;
+}
+
+.about {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 240px;
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 중앙정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+.about > h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 100px;
+}
+.about > .abmenubar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;   
+}
+
+/*  */
+header > .mainContainer {
+    background: url("/css/image/main.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 780px;
+    margin-top: 160px;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+.mainContainer > .bigContainer {
+    float: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;  
+    width: 1280px;
+    height: 100%;
+    position: relative;
+}
+.mainContainer > .bigContainer > .left {
+    position: absolute;
+    left: -106px;
+}
+.mainContainer > .bigContainer > .top > h2{
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    top: 110px;
+    text-align: left;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; 
+}
+.mainContainer > .bigContainer > .top > p {
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    bottom : 156px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.top > aside {
+    position: absolute;
+    left: 1000px;
+    color: #fff;
+    bottom : 114px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+}
+
+/*  */
+.main {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+.introduce > .top {
+    margin-top: 160px;
+}
+.introduce > .top > h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+.introduce > .top > h4 > i {
+    font-style: normal;
+    color: #b4b4b4;
+}
+.introduce > .bottom {
+    margin-top: 40px;
+}
+.introduce > .bottom > h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+.introduce > .bottom > h4 > i {
+    font-style: normal;
+    color: #b4b4b4;
+}
+
+
+.mainCard {
+    width: 100%;
+    display: grid;
+    grid: '. .';
+    margin-top: 320px;
+    gap: 140px;
+}
+.mainCard > .item {
+    height: 280px;
+    background: white;
+    position: relative;
+}
+.item > b {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+.item > i {
+    position: absolute;
+    margin-top: 32px;
+    margin-left: 370px;
+}
+.item > p {
+    position: absolute;
+    color: #6f6f6f;
+    font-size: 18px;
+    font-weight: 500;
+    width: 440px;
+    padding-left: 60px;
+    bottom: 0px;
+}
+
+div.second-main {
+    background: #0075F8;
+    width: 100%;
+    height: 540px;
+    margin-top: 160px;
+    text-align: center;
+    position: relative;
+}
+div.second-main > div {
+    position: absolute; /* 이미지의 position을 absolute로 변경 */
+    bottom: 0; /* 하단에 붙히기 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%);
+}
+
+
+.main > .option > h4 {
+    margin-top: 160px;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+}
+.main > .option > p {
+    margin-top: 40px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.miniCard {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.miniCard > .item {
+    text-align: left;
+}
+.miniCard > .item > div > b {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; 
+}
+.miniCard > .item > div > p {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 내부 요소들을 세로로 나열 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    margin-top: 160px;
+}
+.footerTop {
+    background: #000;
+    display: flex;
+    width: 1280px;
+    height: 392px;
+}
+.footer-top-left {
+    width: 480px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 120px;
+    line-height: 28px;
+}
+.footer-top-left > p {
+    color: white;
+}
+.footer-top-right {
+    display: flex;
+    gap: 100px; 
+    line-height: 45px;
+    margin-top: 120px;
+}
+.footer-top-right > div > h4 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-top-right > div > p {
+    color: #6f6f6f;;
+    font-size: 18px;
+    font-weight: 700;
+}
+.footerMain {
+    background: gray;
+    width: 1280px;
+    height: 392px;
+}
+.footer-bottom-line {
+    background: black;
+    position:relative;
+}
+footer >  .bottom {
+    width: 100%;
+    height: 346px;
+    color: #000;
+}
+.bottom-container {
+    display: flex;
+    top: 60px;
+    /* align-items: center; */
+    margin: auto;  
+    width: 1280px;
+    height: 182px;
+    position: relative;
+}
+.bottom-container > div.left-text {
+    position: relative;
+    text-align: left;
+    color: #FFF;
+}
+.left-text > p {
+    width: 1048px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.left-text > address, small {
+    margin-top: 8px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.bottom-container > div.right-text {
+    position: relative;
+    color: #FFF;
+    top: 48px;
+}
+.right-text > b {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+.right-text > p {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; 
+}
+.right-text > a {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
