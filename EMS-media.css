@@ -70,7 +70,7 @@ div.menubar > h3.line {
         max-width: 1024px;
     }
 }
-@media(width < 780px) {
+@media(width < 810px) {
     nav {
         max-width: 768px;
         display: inline-block;
@@ -80,10 +80,13 @@ div.menubar > h3.line {
     }
 }
 
+/* ##################################################### */
 .about {
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
+    height: 81px;
     margin: 0 auto;
-    height: 100px;
+    height: 81px;
     margin-top: 240px;
     display: flex; /* 수평 정렬 */
     justify-content: center; /* 중앙정렬 */
@@ -94,31 +97,71 @@ div.menubar > h3.line {
     font-weight: 700;
     line-height: 100px;
 }
-.about > .abmenubar {
+.about > .about-menubar {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     gap: 40px;
     align-items: center;
-    margin-left: auto;   
+    margin-left: auto;  
 }
+.about-menubar > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.about-menubar > h3.gray > a {
+    color: #b4b4b4;
+}
+.about-menubar > h3.black > a {
+    color: #222;
+}
+@media(width < 810px) {
+    .about {
+        width: 680px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        display: block;
+        padding-left: 30px;
+        padding-right: 30px;
+        > h1 { 
+            font-size: 11vw;
+        }
+        > .about-menubar {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+            font-size: 3vw;
+        }
+    }
+}
+@media(width < 680px) {
+    .about-menubar > h3 > a {
+        font-size: 3vw;
+    }
+}
+/* ##################################################### */
 
 .css-image-container {
     width: 100%;
     height: 780px;
+    height: clamp(480px, 56vw, 780px);
     background-image: url('/css/image/main.png');
-    background-repeat: no-repeat;
     background-size: cover;
     margin-top: 40px;
 }
 .center-container {
-    width: 1280px;
+    width: 100%;
     height: 100%;
     display: flex;    
     margin: 0 auto;    
 }
 .pseudo-elements {
     position: relative;
-    /* display: flex; */
+    /* display: xsflex; */
 }
 .pseudo-coursemos::before {
     position: absolute;
@@ -187,7 +230,27 @@ div.menubar > h3.line {
     font-weight: 700;
     line-height: 42px;
     opacity: 0.7;
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 복붙 */
 header > .mainContainer {
     background: url("/css/image/main.png") no-repeat center center;

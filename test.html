@@ -1,302 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
-    <link href="/test.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        div[data-role="container"] {
+            width: 100%;
+            max-width: 1280px;
+            margin:0 auto;
+            padding:10px;
+            box-sizing: border-box;
+        }
+
+        #test1 {
+            width:100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);     
+
+            > div {
+                container-name: card;
+                container-type: inline-size;
+                border:1px solid red;
+                font-size:20px;
+            }
+        }
+
+        @media {width < 900px} {
+            width:800px;
+        }
+
+        @media (width < 840px) {
+            width:500px;
+        }
+
+        @media (width < 540px) {
+            width:100%;
+        }
+
+        @media (width < 600px) {
+            #test1 {
+                background:yellow;
+                grid-template-columns: repeat(3, 1fr);
+
+                > div {
+                    
+                }
+            }
+        }
+
+        @container card (width < 150px) {
+            #test1 {
+                > div {
+                    >b {
+                        font-size:12px;
+                    }
+                }
+            }
+            
+        }
+    </style>
 </head>
-
 <body>
-    <!-- nav.html -->
-    <div class="nav-container">
-        <div class="nav-logobar">
-            <img src="css/image/logo.png" class="logo">
-        </div>
-        <div class="nav-menubar">
-            <div>
-                <h4>ABOUT</h4>
-            </div>
-            <div>
-                <h4>INTERVIEW</h4>
-            </div>
-            <div>
-                <h4>TREND</h4>
-            </div>
-            <div>
-                <h4>CONTACT</h4>
-            </div>
-            <div><img src="css/image/menu.png"></div>
-        </div>
-    </div>
-    <!-- header.html -->
-    <div class="header-container">
-        <div>
-            <h1 class="header-about">ABOUT</h1>
-        </div>
-        <div class="header-about-menubar">
-            <h3 class="header-gray">COURSEMOS LXP</h3>
-            <img src="/css/image/bar.png" class="header-bar">
-            <h3 class="gray">LMS</h3>
-            <img src="/css/image/bar.png" class="header-bar">
-            <h3>EMS</h3>
-            <img src="/css/image/bar.png" class="header-bar">
-            <h3 class="gray">IBT</h3>
-        </div>
-    </div>
+    <div style="width:500px;">
+        <div style="width:100%; background:red;">나는 퍼센트</div>
+        <div style="width:100dvh; background:blue;">나는 vw</div>
 
-    <!-- main 테스트 -->
-    <div class="main-container">
+    </div>
+    <nav>
+        <div data-role="container">
+            aasdasdasd
+        </div>
+    </nav>
 
-        <div class="main-image">
-            <img src="/css/image/main.png">
-            <div class="main-logo">
-                <img src="/css/image/main-coursemos.png">
+    <div data-role="container">
+        <div id="test1">
+            <div>
+                <b>안녕</b>
             </div>
-            <p> </p>
-            <div class="main-line">
-                <img src="/css/image/main-coursemos-line.png">
+    
+            <div>
+                <b>안녕</b>
             </div>
-            <div class="main-ems">
-                <h2>
-                    EMS<br>확장관리시스템
-                </h2>
+    
+            <div>
+                <b>안녕</b>
             </div>
-            <div class="main-small">
-                <p>학습 관리와 포트폴리오 관리를<br>한번에 효율적으로 관리하세요</p>
+    
+            <div>
+                <b>안녕</b>
             </div>
-            <div class="main-right">
-                <p>Extension<br>Management<br>System</p>
+    
+            <div>
+                <b>안녕</b>
+            </div>
+    
+            <div>
+                <b>안녕</b>
             </div>
         </div>
     </div>
-
-    <!-- message.html -->
-    <div class="message-container">
-        <div class="message">
-            <div class="top-msg">
-                <h4 class="message-msg-font">
-                    코스모스 확장관리시스템은
-                    <a class="message-grayfont">교육 운영 방향과 목표에 맞는<br>
-                        역량 기반</a> 통합관리체계를 마련합니다. <br>
-                </h4>
-            </div>
-
-            <div class="bottom-msg">
-                <h4 class="message-grayfont">
-                    맞춤형 학습 프로그램과 다양한 학습경험을 기록하는 <a class="message-msg-font">개인별
-                        <br>포트폴리오를 통해 자기주도적 학습 성장을 지원합니다. </a>
-                </h4>
-            </div>
-        </div>
-    </div>
-
-    <!--/* 여기에 card가 들어와야함 */ -->
-    <div class="card-container turn">
-        <div class="card">
-            <div class="card-text-main">인재상 기반 역량 및<br>성과관리</div>
-            <div>
-                <img src="/css/image/card-1.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                역량진단을 통한 개인의 역량 평가, 교육 과정 및 상담, 진로 및 취업지원을 연계한 통합적인 역량 관리체계를 구축할 수 있습니다. 비교과 프로그램 운영 시 인문, 소통, 창의, 글로벌 등 교육 목표를 반영한 핵심역량을 필수 정보로 등록하여 인재상에 기반한 성과관리가 가능합니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">개인 맞춤형 학습 및<br>상담 서비스 추천</div>
-            <div>
-                <img src="/css/image/card-2.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                학습자의 학업성취 수준을 분석하여 미흡한 역량을 진단하고, 역량을 강화할 수 있는 학습 콘텐츠(도서,교과/비교과)를 추천합니다. 학습자에게 분야별 내·외부 전문가를 추천하는 서비스를 지원해 지속적인 경력관리를 돕습니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">개인별 포트폴리오 <br>기능 지원</div>
-            <div>
-                <img src="/css/image/card-3.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                공모전, 전시회, 수상경력, 해외봉사 등 개인의 학습경험과 활동이 담긴 사진과 증명 자료는 마이 포트폴리오 기능을 통해 관리할 수 있습니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">통계 및 만족도 조사 통한 <br>맞춤형 프로그램 개발</div>
-            <div>
-                <img src="/css/image/card-4.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                비교과 프로그램의 편성 및 선발 현황, 참여율 등 각종 운영 통계자료와 만족도 조사결과를 제공합니다. 운영 실적 및 성과를 분석하여 수요자 중심의 맞춤형 비교과 프로그램을 개발할 수 있습니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">마일리지 및 인증제도로<br>동기부여</div>
-            <div>
-                <img src="/css/image/card-5.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                비교과 프로그램 운영자는 학습자의 참여도에 따라 마일리지를 부여할 수 있으며, 참가를 증명하는 인증서 발급을 통해 참여자의 동기부여를 높일 수 있습니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">교육 데이터 수집 및<br>인프라 확충</div>
-            <div>
-                <img src="/css/image/card-6.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                성과 기반의 시스템 운영체계를 위한 교육 데이터 수집과 통합이 가능하며, 시스템간 연계 및 활용으로 데이터 일관성을 유지할 수 있습니다.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-text-main">PC, Mobile App <br>앱지원</div>
-            <div>
-                <img src="/css/image/card-7.png" class="card-text-image">
-            </div>
-            <div class="card-p">
-                PC와 모바일앱을 지원하며, 별도의 설치 없이 PC, 테블릿, 모바일에서 문서(학습자료)를 클릭하면 바로 내용을 확인할 수 있도록 하여 사용자의 편의성을 높였습니다.
-            </div>
-        </div>
-    </div>
-
-    <!-- image.html -->
-    <div class="image-container">
-        <div class="image-screenImg">
-            <img src="/css/image/bottomImg.png" class="image-display">
-        </div>
-    </div>
-
-    <!-- main-bottom -->
-    <div class="main-bottom">
-        <div class="main-bottom-large">
-            <div>
-                <h4 class="main-bottom-h4">
-                    EMS와 연동 가능한 도구 옵션
-                </h4>
-            </div>
-        </div>
-        <div class="main-bottom-small">
-            <div>
-                <p class="main-bottom-p">
-                    지속적인 도구 옵션 개발을 통해
-                    <br>보다 나은 학습 생태계를 구축할 수 있도록
-                    <br>노력하고 있습니다.
-                </p>
-            </div>
-        </div>
-        <div class="main-bottom-card">
-            <div>
-                <div>
-                    <img src="/css/image/main-bottom-card1.png" class="main-bottom-img">
-                </div>
-                <div class="main-bottom-h1">
-                    <h2>강의 저작도구</h2>
-                </div>
-                <div class="main-bottom-p">
-                    <p>강의 콘텐츠 제작에 최적화된 화면 녹화방식의 저작도구를 공급하며, LMS 내 녹화 저작도구 실행버튼으로 쉽게 프로그램을 실행할 수 있습니다.</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="/css/image/main-bottom-card2.png" class="main-bottom-img">
-                </div>
-                <div class="main-bottom-h1">
-                    <h2>챗봇</h2>
-                </div>
-                <div class="main-bottom-p">
-                    <p>대학 및 기업 내 사용자의 질문의도를 이해해 고객 대응 등 다양한 서비스에 활용할 수 있는 챗봇 인공지능 서비스를 제공합니다. </p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="/css/image/main-bottom-card3.png" class="main-bottom-img">
-                </div>
-                <div class="main-bottom-h1">
-                    <h2>Zoom</h2>
-                </div>
-                <div class="main-bottom-p">
-                    <p>비대면 수업 시 원활한 강의를 위해 Zoom 서비스를 연계 지원합니다. LMS 내 Zoom 화상강의 개설 및 출석 확인 기능을 제공합니다. </p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="/css/image/main-bottom-card4.png" class="main-bottom-img">
-                </div>
-                <div class="main-bottom-h1">
-                    <h2>Class for Zoom</h2>
-                </div>
-                <div class="main-bottom-p">
-                    <p>Zoom에 1:1 토론 및 대화, 평가 등 다양한 교수 학습 도구를 추가 제공하여 교수가와 학습자간 몰입형, 대화형 수업을 가능하게 해줍니다.</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="/css/image/main-bottom-card5.png" class="main-bottom-img">
-                </div>
-                <div class="main-bottom-h1">
-                    <h2>Metaverse Edition</h2>
-                </div>
-                <div class="main-bottom-p">
-                    <p>웹XR 기술을 기반으로 실감형 콘텐츠를 탑재하여 기존의 코스모스를 메타버스 속의 학습공동체로 확장할 수 있습니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- footer-top -->
-    <div class="footer-top">
-        <div class="footer-top-left">
-            <p>회사소개 <img src="/css/image/footer-top-icon.png"></p>
-            <p>공지사항 <img src="/css/image/footer-top-icon.png"></p>
-            <p>개인정보처리방침 <img src="/css/image/footer-top-icon.png"></p>
-            <p>이메일무단수집거부 <img src="/css/image/footer-top-icon.png"></p>
-        </div>
-        <div class="footer-top-right">
-            <div>
-                <h4>COURSEMOS</h4>
-                <p>COURSEMOS LXP</p>
-                <p>LMS</p>
-                <p>EMP</p>
-                <p>IBT</p>
-            </div>
-            <div>
-                <h4>INTERVIEW</h4>
-                <p>INSIDE</p>
-                <p>OUTSIDE</p>
-            </div>
-            <div>
-                <h4>TREND</h4>
-                <p>RESEARCH</p>
-                <p>ANINUAL</p>
-            </div>
-            <div>
-                <h4>CONTACT</h4>
-                <p>INQUIRY</p>
-                <p>SUPPORT</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom-line">
-        <img src="/css/image/footer-line.png" class="foofter-bottom-line">
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-bottom-left">
-            <img src="/css/image/footer-coursemos-logo.png">
-            <div>
-                <p class="footer-bottom-company">(주)유비온</p>
-                <p class="footer-bottom-address">서울시 구로구 디지털로 34길 27 대룡포스트타워
-                    <br>3차 6층 601호 (152-746)</p>
-                <p class="footer-bottom-address">© 2022 Ubion, Inc. All rights reserved</p>
-            </div>
-        </div>
-        <div class="footer-bottom-right">
-            <div class="footer-bottom-customer">
-                <p>CUSTOMER</p>
-            </div>
-            <div class="footer-bottom-tel">02-1234-5678</div>
-            <div class="footer-bottom-email">e-mail : slaes@naddle.net</div>
-        </div>
-    </div>
+    
 </body>
-
 </html>
