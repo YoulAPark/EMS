@@ -1,58 +1,32 @@
  <!DOCTYPE html>
  <html lang="ko">
  <head>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        body {background: #b71c1c; color:#fff}
-        @media (max-width: 1280px){ /* 데스크탑 */
-            body {
-                background: #880e4f;
-            }
-        }
-        @media (max-width: 1024px){ /* 데스크탑 */
-            body {
-                background: #4a148c;
-            }
-        }
-        @media (max-width: 960px){ /* 노트북 */
-            body {
-                background: #58ff7a;
-            }
-        }
-        @media (max-width: 768px){ /* 태블릿 */
-            body {
-                background: #58ff7a;
-            }
-        }
-        @media (max-width: 576px){ /* 모바일 */
-            body {
-                background: #58ff7a;
-            }
-        }
-        
+		body {
+			width: 1280px;
+			margin: 0 auto;
+		}
+		#grid {
+			border: 5px solid pink;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		div {
+			border: 5px solid gray;
+		}
     </style>
  </head>
  <body>
-    <div class="about">
-        <h1>ABOUT</h1>
-        <div class="menubar">
-            <h3 class="gray">
-                <a href="/EMS.html">COURSEMOS LXP</a>
-            </h3>
-            <h3 class="line"></h3>
-            <h3 class="gray">
-                <a href="https://dev.imodules.io/ko/about/lms">LMS</a>
-            </h3>
-            <h3 class="line"></h3>
-            <h3 class="black">
-                <a href="https://dev.imodules.io/ko/about/ems">EMS</a>
-            </h3>
-            <h3 class="line"></h3>
-            <h3 class="gray">
-                <a href="https://dev.imodules.io/ko/about/ibt">IBT</a>
-            </h3>
-        </div>
-    </div>
- </body>
+	<div id="grid">
+		<div>NAVIGATION</div>
+		<div>ARTICLE</div>
+		<div>NAVIGATION</div>
+		<div>ARTICLE</div>
+		<div>NAVIGATION</div>
+		<div>ARTICLE</div>
+	</div>
+</body>
  </html>

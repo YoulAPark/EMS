@@ -1,0 +1,794 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    margin: 0 auto;
+}
+.coursemosLogo {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: 81px;
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 중앙정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+.coursemosLogo > h1 > a {
+    display: inline-block; 
+    background-image: url('css/image/logo.png');
+    width: 176px;
+    height: 26px;
+}
+.coursemosLogo > div.menubar > button {
+    background-image: url('/css/image/menu.png');
+    border:none;
+    width: 34px;
+    height: 34px;    
+}
+.menubar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;    
+}
+.menubar > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.menubar > h3.gray > a {
+    color: #b4b4b4;
+}
+.menubar > h3.black > a {
+    color: #222;
+}
+div.menubar > h3.line {
+    top: calc(50% - 8px);
+    left: calc(var(--navigation-height) / 2 * -1);
+    width: 1px;
+    height: 16px;
+    background: #D9D9D9;
+    content: " ";
+}
+
+/* ##################################################### */
+.about {
+    max-width: 1280px;
+    width: 100%;
+    height: 81px;
+    margin: 0 auto;
+    height: 81px;
+    margin-top: 240px;
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 중앙정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+.about > h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 100px;
+}
+.about > .about-menubar {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;  
+}
+.about-menubar > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.about-menubar > h3.gray > a {
+    color: #b4b4b4;
+}
+.about-menubar > h3.black > a {
+    color: #222;
+}
+/* ##################################################### */
+.css-image-container {
+    width: 100%;
+    margin-top: 40px;
+    background-image: url('/css/image/main.png');
+    background-size: cover;
+    height: clamp(480px, 56vw, 780px);
+}
+.center-container {
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    margin: 0 auto;    
+}
+.pseudo-elements {
+    position: relative;
+    /* display: xsflex; */
+}
+.pseudo-coursemos::before {
+    position: absolute;
+    content: "COURSEMOS";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    top: 121px;
+    left: -69px;
+    width: 80px;
+    height: 24px;
+    transform: rotate(90deg); /* 90도 회전 */
+    color: #fff;
+    transform-origin: top left;
+}
+.pseudo-coursemos::after {
+    position: absolute;
+    content: ' ';
+    top: 210px;
+    left: -80px;
+    width: 1px;
+    height: 444px;
+    opacity: 0.6;
+    background: #FFF;
+}
+.center-elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 1280px;
+    height: 100%;
+    position: relative;
+}
+.center-elements > h2 {
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    top: 110px;
+    text-align: left;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+.center-elements > .bottom {
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    bottom: 156px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.center-elements > aside {
+    position: absolute;
+    left: 1000px;
+    color: #fff;
+    bottom: 114px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 복붙 */
+header > .mainContainer {
+    background: url("/css/image/main.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 780px;
+    margin-top: 160px;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+.bigContainer {
+    float: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;  
+    width: 1280px;
+    height: 100%;
+    position: relative;
+}
+.mainContainer > .bigContainer > .left {
+    position: absolute;
+    left: -106px;
+}
+.mainContainer > .bigContainer > .top > h2{
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    top: 110px;
+    text-align: left;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; 
+}
+.mainContainer > .bigContainer > .top > p {
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    bottom : 156px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.top > aside {
+    position: absolute;
+    left: 1000px;
+    color: #fff;
+    bottom : 114px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+}
+
+/*  */
+.image-container {
+    background: url("/css/image/main.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 780px;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+.what {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.image-main-container {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.image-main-container::before {
+    position: absolute;
+    content: "COURSEMOS";
+    font-size: 12px;
+    top: 121px;
+    /* left: 227px; */
+    width: 80px;
+    height: 24px;
+    /* line-height: 24px; */
+    transform: rotate(90deg); /* 90도 회전 */
+    font-weight: 700;
+    color: #fff;
+    transform-origin: top left;
+}
+.image-main-container::after {
+    position: absolute;
+    content: ' ';
+    top: 216px;
+    left: 216px;
+    width: 1px;
+    height: 444px;
+    opacity: 0.6;
+    background: #FFF;
+}
+
+.image-main-container > h2 {
+    position: absolute;
+    left: 320px;
+    color: #fff;
+    top: 110px;
+    text-align: left;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; 
+}
+.image-main-centerLine {
+    position: absolute;
+    top: 488px;
+    left: 320px;
+    width: 1280px;
+    height: 1px;
+    background: #E6E6E6;
+    opacity: 0.2;
+}
+.image-main-container > p.image-main-right {
+    position: absolute;
+    left: 320px;
+    color: #fff;
+    bottom : 156px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.image-main-container > aside {
+    position: absolute;
+    left: 1311px;
+    color: #fff;
+    bottom : 114px;
+    text-align: left;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+}
+
+#expand {
+    width: 80vw;
+    margin: 0 auto;
+    > div.expand-main {
+        padding-top: 160px;
+        padding-bottom: 160px;
+        > div {
+            padding-bottom: 40px;
+        }
+        > div > h4 {
+            color: #222;
+            font-size: 2.8vw;/* 3rem; */
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.25;
+            > span {
+                color: #b4b4b4;
+                font-size: 2.8vw;/*3rem; */
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.25;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.main {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+.introduce > .top {
+    margin-top: 160px;
+}
+.introduce > .top > h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+.introduce > .top > h4 > i {
+    font-style: normal;
+    color: #b4b4b4;
+}
+.introduce > .bottom {
+    margin-top: 40px;
+}
+.introduce > .bottom > h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+.introduce > .bottom > h4 > i {
+    font-style: normal;
+    color: #b4b4b4;
+}
+
+
+.mainCard {
+    width: 100%;
+    display: grid;
+    grid: '. .';
+    margin-top: 320px;
+    gap: 140px;
+}
+.mainCard > .item {
+    height: 280px;
+    background: white;
+    position: relative;
+}
+.item > b {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+.item > i {
+    position: absolute;
+}
+.item > .image-1 {
+    background-image: url('/css/image/card-1.png');
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 130px;
+    margin-top: 26px;
+    margin-left: 362px;
+}
+.item > .image-2 {
+    background-image: url('/css/image/card-2.png');
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    margin-top: 44px;
+    margin-left: 362px;
+}
+.item > .image-3 {
+    background-image: url('/css/image/card-3.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: 362px;
+}
+.item > .image-4 {
+    background-image: url('/css/image/card-4.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 37px;
+    margin-left: 362px;
+}
+.item > .image-5 {
+    background-image: url('/css/image/card-5.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 44px;
+    margin-left: 362px;
+}
+.item > .image-6 {
+    background-image: url('/css/image/card-6.png');
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    margin-top: 35px;
+    margin-left: 362px;
+}
+.item > .image-7 {
+    background-image: url('/css/image/card-7.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 41px;
+    margin-left: 362px;
+}
+.item > p {
+    position: absolute;
+    top: 180px;
+    color: #6f6f6f;
+    width: 440px;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: text-top;
+    padding-left: 60px;
+    bottom: 0px;
+    line-height: 28px;
+}
+
+.dashboard {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    background: #0075F8;
+    margin-top: 160px;
+    text-align: center;
+    display: flex; /* 가로 및 세로 중앙 정렬을 위한 flex 설정 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+.dashboard-image {
+    position: absolute;
+    width: 1000px;
+    height: 440px;
+    background-image: url('/css/image/bottomImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 100px;
+}
+
+.main > .option > h4 {
+    margin-top: 160px;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+}
+.main > .option > p {
+    margin-top: 40px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.mini-card {
+    display: flex;
+    margin-top: 60px;
+    gap: 20px;
+}
+.mini-card > div > div > b {
+    position: relative;
+    top: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+.mini-card > div > div > p {
+    position: relative;
+    top: 30px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.mini-card-1 > i {
+    background-image: url('/css/image/main-bottom-card1.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-2 > i {
+    background-image: url('/css/image/main-bottom-card2.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-3 > i {
+    background-image: url('/css/image/main-bottom-card3.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-4 > i {
+    background-image: url('/css/image/main-bottom-card4.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-5 > i {
+    background-image: url('/css/image/main-bottom-card5.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+.footer {
+    background: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 내부 요소들을 세로로 나열 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    margin-top: 160px;
+}
+.footerTop {
+    background: #000;
+    display: flex;
+    width: 1280px;
+    height: 392px;
+}
+.footer-top-left {
+    position: relative;
+    width: 480px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 120px;
+    line-height: 28px;
+}
+
+
+
+.footer-container {
+    display: inline-block;
+    position: relative;
+    width: 480px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 120px;
+    line-height: 32px;
+}
+.footer-container > div {
+    display: flex; /* 자식 요소를 가로로 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px; /* 각 요소 사이의 간격을 조절 (원하는 값으로 조정) */
+}
+.footer-container > div > a {
+    color: #fff;
+}
+.footer-container > div > a.icon::after {    
+    position: absolute;
+    display: inline-block;
+    background-image: url('/css/image/footer-top-icon.png');
+    content: "  ";
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; 
+}
+
+.navigation {
+    display: flex;
+    margin-top: 120px;
+}
+.navigation > li {
+    width: 200px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.navigation > li > b {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+.navigation > li > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    color: #6f6f6f;
+}
+.navigation > li > ul > li > a{
+    color: #6f6f6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+footer > .bottom::before {
+    position: absolute;
+    content: ' ';
+    width: 100%; /* 전체 화면 너비로 설정 */
+    height: 1px;
+    background: #222;
+    left: 0;
+    transform: translateY(-50%);
+}
+footer >  .bottom {
+    width: 100%;
+    height: 346px;
+    color: #000;
+}
+.bottom-container {
+    display: flex;
+    top: 60px;
+    margin: auto;  
+    width: 1280px;
+    height: 182px;
+    position: relative;
+}
+.bottom-container > div.left-text {
+    position: relative;
+    text-align: left;
+    color: #FFF;
+}
+.left-text > h4 {
+    background-image: url('/css/image/footer-coursemos-logo.png');
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 26px;    
+}
+.left-text > b {
+    display: block;
+    width: 1048px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.left-text > address, small {
+    margin-top: 8px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.bottom-container > div.right-text {
+    display: block;
+    position: relative;
+    color: #FFF;
+    top: 48px;
+}
+.right-text > b {
+    display: block;
+    top: 110px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+.right-text > div > a.num {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; 
+}
+.right-text > .email > a{
+    color: #6f6f6f;
+    margin-top: 8px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+
+@media only screen and (width < 1180px) {
+    body {
+    }
+  }
+  @media only screen and (width < 980px) {
+    body {
+    }
+  }
+  @media only screen and (width < 840px) {
+    body {
+    }
+  }
+  @media only screen and (width < 760px) {
+    body {
+    }
+  }
+  @media only screen and (width < 680px) {
+    body {
+    }
+  }

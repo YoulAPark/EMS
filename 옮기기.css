@@ -1,0 +1,187 @@
+/* main.container {
+    width: 100%;
+}
+.main {
+    width: 66.6667vw;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+.mainCard {
+    border: 1px solid black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 320px;
+    gap: 140px;
+}
+.mainCard > .item {
+    border: 1px solid red;
+    height: 280px;
+    background: white;
+    position: relative;
+}
+.item > b {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+.item > i {
+    position: absolute;
+}
+.item > .image-1 {
+    background-image: url('/css/image/card-1.png');
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 130px;
+    margin-top: 26px;
+    margin-left: 362px;
+}
+.item > .image-2 {
+    background-image: url('/css/image/card-2.png');
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    margin-top: 44px;
+    margin-left: 362px;
+}
+.item > .image-3 {
+    background-image: url('/css/image/card-3.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: 362px;
+}
+.item > .image-4 {
+    background-image: url('/css/image/card-4.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 37px;
+    margin-left: 362px;
+}
+.item > .image-5 {
+    background-image: url('/css/image/card-5.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 44px;
+    margin-left: 362px;
+}
+.item > .image-6 {
+    background-image: url('/css/image/card-6.png');
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    margin-top: 35px;
+    margin-left: 362px;
+}
+.item > .image-7 {
+    background-image: url('/css/image/card-7.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin-top: 41px;
+    margin-left: 362px;
+}
+.item > p {
+    position: absolute;
+    color: #6f6f6f;
+    width: 440px;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: text-top;
+    padding-left: 60px;
+    bottom: 0px;
+    line-height: 28px;
+}
+
+.dashboard {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    background: #0075F8;
+    margin-top: 160px;
+    text-align: center;
+    display: flex; /* 가로 및 세로 중앙 정렬을 위한 flex 설정 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+.dashboard-image {
+    position: absolute;
+    width: 1000px;
+    height: 440px;
+    background-image: url('/css/image/bottomImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 100px;
+}
+
+.main > .option > h4 {
+    margin-top: 160px;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+}
+.main > .option > p {
+    margin-top: 40px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+.mini-card {
+    display: flex;
+    margin-top: 60px;
+    gap: 20px;
+}
+.mini-card > div > div > b {
+    position: relative;
+    top: 16px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+.mini-card > div > div > p {
+    position: relative;
+    top: 30px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.mini-card-1 > i {
+    background-image: url('/css/image/main-bottom-card1.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-2 > i {
+    background-image: url('/css/image/main-bottom-card2.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-3 > i {
+    background-image: url('/css/image/main-bottom-card3.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-4 > i {
+    background-image: url('/css/image/main-bottom-card4.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.mini-card-5 > i {
+    background-image: url('/css/image/main-bottom-card5.png');
+    display: block;
+    width: 80px;
+    height: 80px;
+} */
