@@ -8,10 +8,14 @@ ul,ol {
 }
 a {
     text-decoration: none;
+    color: inherit; 
 }
-html, body {
-    width: 100%;
+html{
+    width:100%;
     height: 100%;
+}
+body {
+    width: 100%;
     margin: 0 auto;
 }
 header{
@@ -65,6 +69,21 @@ div.menubar > h3.line {
     background: #D9D9D9;
     content: " ";
 }
+/* 상단 navbar media */
+@media(width < 1024px) {
+    nav {
+        max-width: 1024px;
+    }
+}
+@media(width < 810px) {
+    nav {
+        max-width: 768px;
+        display: inline-block;
+    }
+    .menubar > h4 {
+        display:none;
+    }
+}
 
 /* ##################################################### */
 .about {
@@ -77,6 +96,7 @@ div.menubar > h3.line {
     display: flex; /* 수평 정렬 */
     justify-content: center; /* 중앙정렬 */
     align-items: center; /* 가운데 정렬 */
+    padding-bottom: 40px;
 }
 .about > h1 {
     font-size: 72px;
@@ -103,20 +123,103 @@ div.menubar > h3.line {
 .about-menubar > h3.black > a {
     color: #222;
 }
+@media(width < 810px) {
+    .about {
+        width: 680px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        display: block;
+        padding-left: 30px;
+        padding-right: 30px;
+        > h1 { 
+            font-size: 11vw;
+        }
+        > .about-menubar {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+            font-size: 3vw;
+        }
+    }
+}
+@media(width < 680px) {
+    .about-menubar > h3 > a {
+        font-size: 3vw;
+    }
+}
 /* ##################################################### */
-.css-image-container {
+
+#main {
     width: 100%;
-    margin-top: 40px;
+    height: clamp(480px, 56vw, 780px);
     background-image: url('/css/image/main.png');
     background-size: cover;
-    height: clamp(480px, 56vw, 780px);
+    background-position: 50% 50%;
 }
-.center-container {
-    width: 100%;
-    height: 100%;
-    display: flex;    
-    margin: 0 auto;    
+#main > .main-text {
+    width: 1280px;
+    height: 670px;
+    padding-top: 110px;
+    margin: 0 auto;
+    @media (max-width: 1390px) {
+        width: 90%;
+    }
 }
+#main > .main-text > h2 {
+    color: #FFF;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+#main > .main-text > .main-sidetext {
+    display: flex;
+    color: #FFF;
+    justify-content: space-between;
+    padding-top: 310px; /* 반응형 */
+}
+@media (max-width: 1280px) {
+    #main > .main-text > .main-sidetext {
+        padding-top: 25%;
+    }
+}
+@media (max-width: 1080px) {
+    #main > .main-text {
+        padding-top: 10%;
+    }
+    #main > .main-text > .main-sidetext {
+        padding-top: 10%;
+        display: block;
+    }
+    #main > .main-text > .main-sidetext aside br {
+        display: none;
+    }
+    #main > .main-text > .main-sidetext > h4 {
+        margin-bottom: 5%;
+    }
+}
+
+#main > .main-text > .main-sidetext > h4 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+#main > .main-text > .main-sidetext > aside {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+    @media (max-width: 1080px) {
+        aside br {
+            display: none; /* <br> 태그 숨기기 */
+        }
+    }
+}
+
 .pseudo-elements {
     position: relative;
     /* display: xsflex; */
@@ -146,68 +249,6 @@ div.menubar > h3.line {
     opacity: 0.6;
     background: #FFF;
 }
-.center-elements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 1280px;
-    height: 100%;
-    position: relative;
-}
-.center-elements > h2 {
-    position: absolute;
-    left: 0px;
-    color: #fff;
-    top: 110px;
-    text-align: left;
-    font-size: 46px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 60px;
-}
-.center-elements > .bottom {
-    position: absolute;
-    left: 0px;
-    color: #fff;
-    bottom: 156px;
-    text-align: left;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 42px;
-}
-.center-elements > aside {
-    position: absolute;
-    left: 1000px;
-    color: #fff;
-    bottom: 114px;
-    text-align: left;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 42px;
-    opacity: 0.7;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 복붙 */
 header > .mainContainer {
@@ -364,6 +405,9 @@ header > .mainContainer {
 #expand {
     width: 80vw;
     margin: 0 auto;
+    display: flex;
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
     > div.expand-main {
         padding-top: 160px;
         padding-bottom: 160px;
@@ -372,13 +416,13 @@ header > .mainContainer {
         }
         > div > h4 {
             color: #222;
-            font-size: 2.8vw;/* 3rem; */
+            font-size: 46px;
             font-style: normal;
             font-weight: 500;
             line-height: 1.25;
             > span {
                 color: #b4b4b4;
-                font-size: 2.8vw;/*3rem; */
+                font-size: 46px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 1.25;
@@ -386,249 +430,262 @@ header > .mainContainer {
         }
     }
 }
+@media(width < 1024px) {
+
+}
+@media(width < 810px) {
+    #expand {
+        width: 90vw;
+        margin: 0 auto;
+        > div.expand-main {
+            padding: 119px 0px 100px 0px;
+            > div > h4 {
+                color: #222;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.25;
+                > span {
+                    color: #b4b4b4;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.25;
+                }
+            }
+        }
+    }
+}
 
 
-
-
-
-
-
-
-.main {
-    width: 1280px;
+/* !!!!! */
+#main {
+  }
+  .grid {
+    border: 1px solid green;
+    width: 80%;
     margin: 0 auto;
-    height: 100%;
-}
-.introduce > .top {
-    margin-top: 160px;
-}
-.introduce > .top > h4 {
-    font-size: 46px;
-    font-weight: 500;
-}
-.introduce > .top > h4 > i {
-    font-style: normal;
-    color: #b4b4b4;
-}
-.introduce > .bottom {
-    margin-top: 40px;
-}
-.introduce > .bottom > h4 {
-    font-size: 46px;
-    font-weight: 500;
-}
-.introduce > .bottom > h4 > i {
-    font-style: normal;
-    color: #b4b4b4;
-}
-
-
-.mainCard {
-    width: 100%;
     display: grid;
-    grid: '. .';
-    margin-top: 320px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 140px;
+    @media (max-width: 1300px) {
+        width: 100%;
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .card-container {
+    border: 1px solid black;
+    width: 100%;
+    position: relative;
+    /* background-color: green; */
+  }
+  .card-container::after {
+    display: block;
+    content: "";
+    padding-bottom: 100%;
+  }
+  .card-box {
+    border: 1px solid blue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    > b {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+    }
+  }
+#main > .grid > .card-container > .card-box > div > .image-1 {
+    background-image: url('/css/image/card-1.png');
+    content: '';
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+
+
+main.container {
+    border: 1px solid tomato;
+    width: 100%;
+    margin: 0 auto;
+}
+main.container > .main {
+    background-color: #999;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+}
+main.container > .main > .mainCard {
+    border: 1px solid green;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 140px;
 }
-.mainCard > .item {
-    height: 280px;
-    background: white;
-    position: relative;
-}
-.item > b {
-    position: absolute;
+main.container > .main > .mainCard > .item {
+    background: red;
+    max-width: 53.333rem;
+} 
+main.container > .main > .mainCard > .item > b {
+    color: #222;
     font-size: 32px;
-    font-weight: 700;
-    
-}
-.item > i {
-    position: absolute;
-}
-.item > .image-1 {
-    background-image: url('/css/image/card-1.png');
-    background-repeat: no-repeat;
-    width: 130px;
-    height: 130px;
-    margin-top: 26px;
-    margin-left: 362px;
-}
-.item > .image-2 {
-    background-image: url('/css/image/card-2.png');
-    background-repeat: no-repeat;
-    width: 110px;
-    height: 110px;
-    margin-top: 44px;
-    margin-left: 362px;
-}
-.item > .image-3 {
-    background-image: url('/css/image/card-3.png');
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 120px;
-    margin-top: 30px;
-    margin-left: 362px;
-}
-.item > .image-4 {
-    background-image: url('/css/image/card-4.png');
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 120px;
-    margin-top: 37px;
-    margin-left: 362px;
-}
-.item > .image-5 {
-    background-image: url('/css/image/card-5.png');
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 120px;
-    margin-top: 44px;
-    margin-left: 362px;
-}
-.item > .image-6 {
-    background-image: url('/css/image/card-6.png');
-    background-repeat: no-repeat;
-    width: 110px;
-    height: 110px;
-    margin-top: 35px;
-    margin-left: 362px;
-}
-.item > .image-7 {
-    background-image: url('/css/image/card-7.png');
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 120px;
-    margin-top: 41px;
-    margin-left: 362px;
-}
-.item > p {
-    position: absolute;
-    top: 180px;
-    color: #6f6f6f;
-    width: 440px;
-    font-size: 18px;
-    font-weight: 500;
-    vertical-align: text-top;
-    padding-left: 60px;
-    bottom: 0px;
-    line-height: 28px;
-}
-
-.dashboard {
-    position: relative;
-    width: 100%;
-    height: 540px;
-    background: #0075F8;
-    margin-top: 160px;
-    text-align: center;
-    display: flex; /* 가로 및 세로 중앙 정렬을 위한 flex 설정 */
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: center; /* 가로 중앙 정렬 */
-}
-.dashboard-image {
-    position: absolute;
-    width: 1000px;
-    height: 440px;
-    background-image: url('/css/image/bottomImg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 100px;
-}
-
-.main > .option > h4 {
-    margin-top: 160px;
-    font-size: 46px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 60px;
-}
-.main > .option > p {
-    margin-top: 40px;
-    color: #6f6f6f;
-    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 42px;
 }
-.mini-card {
-    display: flex;
-    margin-top: 60px;
-    gap: 20px;
+main.container > .main > .mainCard > .item > i {
+    /* 여기하자 */
+} 
+
+/* 그림 */
+.item > i.image-1 {
+    display: block;
+    background-image: url('css/image/card-1.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
-.mini-card > div > div > b {
-    position: relative;
-    top: 16px;
-    font-size: 24px;
+.item > i.image-2 {
+    display: block;
+    background-image: url('css/image/card-2.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.item > i.image-3 {
+    display: block;
+    background-image: url('css/image/card-3.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.item > i.image-4 {
+    display: block;
+    background-image: url('css/image/card-4.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.item > i.image-5 {
+    display: block;
+    background-image: url('css/image/card-5.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.item > i.image-6 {
+    display: block;
+    background-image: url('css/image/card-6.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.item > i.image-7 {
+    display: block;
+    background-image: url('css/image/card-7.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+/* 그림끝 */
+
+#footer {
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 738px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    color: white;
+}
+#footer > div.left {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
+    min-width: 1024px;
+}
+#footer > div.left > ul {
+    display: flex;
+    padding-bottom: 60px;
+}
+@media(max-width: 1120px) {
+    #footer > div.left {
+        width: 80%;
+    }
+    #footer > div.left > ul {
+    }
+}
+#footer > div.left > ul > li.left {
+    width: 37.5%;
+}
+#footer > div.left > ul > li.left > ul {
+    display: grid;
+    gap: 8px;
+}
+#footer > div.left > ul > li.left > ul > a {
+    color: #FFF;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 28px;
+    
 }
-.mini-card > div > div > p {
-    position: relative;
-    top: 30px;
-    color: #6f6f6f;
-    font-size: 16px;
+#footer > div.left > ul > li.right {
+    width: 200px;
+}
+#footer > div.left > ul > li.right > b {
+    color: #FFF;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-}
-.mini-card-1 > i {
-    background-image: url('/css/image/main-bottom-card1.png');
+    font-weight: 700;
+    line-height: 28px;
     display: block;
-    width: 80px;
-    height: 80px;
+    padding-bottom: 24px;
 }
-.mini-card-2 > i {
-    background-image: url('/css/image/main-bottom-card2.png');
-    display: block;
-    width: 80px;
-    height: 80px;
+#footer > div.left > ul > li.right > ul {
+    display: grid;
+    gap: 16px;
 }
-.mini-card-3 > i {
-    background-image: url('/css/image/main-bottom-card3.png');
-    display: block;
-    width: 80px;
-    height: 80px;
+#footer > div.left > ul > li.right > ul > li {
+    display: grid;
+    gap: 16px;
 }
-.mini-card-4 > i {
-    background-image: url('/css/image/main-bottom-card4.png');
-    display: block;
-    width: 80px;
-    height: 80px;
+#footer > div.left > ul > li.right > ul > li > a {
+    color: #6f6f6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
 }
-.mini-card-5 > i {
-    background-image: url('/css/image/main-bottom-card5.png');
-    display: block;
-    width: 80px;
-    height: 80px;
+footer > div.right::before {
+    position: absolute;
+    content: ' ';
+    width: 100%; /* 전체 화면 너비로 설정 */
+    height: 1px;
+    background: #222;
+    left: 0;
+    transform: translateY(-50%);
 }
+
 
 .footer {
     background: #000;
     width: 100%;
-    display: flex;
-    flex-direction: column; /* 내부 요소들을 세로로 나열 */
-    justify-content: center; /* 수직 가운데 정렬 */
-    align-items: center; /* 수평 가운데 정렬 */
     margin-top: 160px;
 }
 .footerTop {
     background: #000;
     display: flex;
-    width: 1280px;
+    width: 100%;
     height: 392px;
 }
-.footer-top-left {
-    position: relative;
-    width: 480px;
-    font-style: normal;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 120px;
-    line-height: 28px;
-}
-
-
-
 .footer-container {
     display: inline-block;
     position: relative;
@@ -636,8 +693,9 @@ header > .mainContainer {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
-    margin-top: 120px;
+    /* margin-top: 120px; */
     line-height: 32px;
+    top: 120px;
 }
 .footer-container > div {
     display: flex; /* 자식 요소를 가로로 정렬 */
@@ -657,9 +715,51 @@ header > .mainContainer {
     margin-right: 8px; 
 }
 
+
+
+footer > .bottom::before {
+    position: absolute;
+    content: ' ';
+    width: 100%; /* 전체 화면 너비로 설정 */
+    height: 1px;
+    background: #222;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#top {
+    width: 100%;
+    height: 392px;
+    color: #000;
+}
+#top > .top-container {
+    display: flex;
+    top: 120px;
+    margin: auto;  
+    width: 1280px;
+    height: 182px;
+    position: relative;
+}
+#top > .top-container > div.left-text {
+    width: 480px;
+    display: inline-grid;
+    position: relative;
+    text-align: left;
+    color: #FFF;
+}
+#top > .top-container > div.left-text > a {
+    color: var(--neutrals-white, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+#top > .top-container > div.right-text {
+    width: 800px;
+    position: relative;
+}
 .navigation {
     display: flex;
-    margin-top: 120px;
 }
 .navigation > li {
     width: 200px;
@@ -691,31 +791,24 @@ header > .mainContainer {
     line-height: 28px;
 }
 
-footer > .bottom::before {
-    position: absolute;
-    content: ' ';
-    width: 100%; /* 전체 화면 너비로 설정 */
-    height: 1px;
-    background: #222;
-    left: 0;
-    transform: translateY(-50%);
-}
-footer >  .bottom {
-    width: 100%;
+footer > .bottom {
+    width: 80%;
     height: 346px;
+    margin: 0 auto;
     color: #000;
+    max-width: 1280px;
+    min-width: 1024px;
 }
 .bottom-container {
     display: flex;
-    top: 60px;
+    padding-top: 60px;
     margin: auto;  
-    width: 1280px;
-    height: 182px;
     position: relative;
 }
 .bottom-container > div.left-text {
     position: relative;
     text-align: left;
+    width: 68.75%;
     color: #FFF;
 }
 .left-text > h4 {
@@ -745,7 +838,7 @@ footer >  .bottom {
     display: block;
     position: relative;
     color: #FFF;
-    top: 48px;
+    padding-top: 50px;
 }
 .right-text > b {
     display: block;
@@ -772,23 +865,83 @@ footer >  .bottom {
     line-height: 24px; 
 }
 
-@media only screen and (width < 1180px) {
-    body {
+
+
+
+  #dashboard {
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  #dashboard > .container {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  #dashboard > .container> .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 140px;
+  }
+  @media(max-width: 1300px) {
+    #dashboard {
+        padding-top: 0px;
+        padding-bottom: 100px;
+    }
+    #dashboard > .container {
+        width: 100%;
+    }
+    #dashboard > .container> .card {
+        gap: 90px;
     }
   }
-  @media only screen and (width < 980px) {
-    body {
-    }
+  #dashboard > .container> .card > div {
+    position: relative;
   }
-  @media only screen and (width < 840px) {
-    body {
-    }
+  #dashboard > .container> .card > div > b {
+    color: #222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;     
   }
-  @media only screen and (width < 760px) {
-    body {
-    }
+  #dashboard > .container> .card > div > i {
+    width: 120px;
+    height: 120px;
+    right: 0px;
+    top: 0px;
+    margin: 0 30px;
+    position: absolute;
   }
-  @media only screen and (width < 680px) {
-    body {
+  #dashboard > .container> .card > div > i.image-1 {
+    
+    background-image: url('css/image/card-1.png');
+    background-repeat: no-repeat;
+  }
+  #dashboard > .container> .card > div > p {
+    color: #6f6f6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    padding-top: 23%;
+    padding-left: 18%;
+  }
+   /* 여기! */
+   @media(max-width: 970px) {
+    #dashboard > .container {
+        width: 80%;
+    }
+    #dashboard > .container> .card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 100px;
+    }
+    #dashboard > .container> .card > div > i {
+        width: 120px;
+        height: 120px;
+        right: 0px;
+        top: 0px;
+        margin: 7% 0%;
+        position: absolute;
     }
   }
