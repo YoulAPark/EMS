@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; 
+            /* font-size:clamp(12px, 1.1429vw, 20px); 기본 폰트 사이즈 지정하는 방식 clamp(최소폰트, vw적용, 최대폰트) */
+        }
+        ul,ol {
+            list-style: none;
+        }
+        a {
+            text-decoration: none; /* browser의 기본태그를 사용하지 않기 위한 지정 (예: 밑줄) */
+            color: inherit; /* a태그에 color 적용되지 않기 위한 사용 */
+        }
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background: #FFF;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        body > header{
+            width: 100%;
+            margin: 0 auto;
+        }
+        body > header > nav {
+            width: 100%;
+            padding: 20px; 
+        }
+        body > header > nav > div.test {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 40px;
+        }
+        body > header > nav > div > h1 {
+            flex-shrink: 0;
+            flex-grow: 0;
+            width: 180px;
+            height: 40px;
+
+            > a {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            > a::after {
+                position: absolute;
+                content: " ";
+                background-image: url('/css/image/logo.png');
+                width: 176px;
+                height: 26px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header class="subpage">
+        <nav>
+            <div class="test">
+                <h1><a href="/">코스모스</a></h1>
+                <ul>
+                    <li><a href="/ko/about">ABOUT</a></li>
+                    <li><a href="/ko/interview">INTERVIEW</a></li>
+                    <li><a href="/ko/trend">TREND</a></li>
+                    <li><a href="/ko/contact">CONTACT</a></li>
+                </ul>
+                <button type="button" onclick="document.querySelector('nav').classList.toggle('opened');">
+                    버튼
+                </button>
+            </div>
+        </nav>
+    </header>        
+</body>
+</html>

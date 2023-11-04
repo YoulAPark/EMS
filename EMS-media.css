@@ -1,55 +1,138 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
-    font-size:clamp(12px, 1.1429vw, 20px);
+    box-sizing: border-box; 
+    /* font-size:clamp(12px, 1.1429vw, 20px); 기본 폰트 사이즈 지정하는 방식 clamp(최소폰트, vw적용, 최대폰트) */
 }
 ul,ol {
     list-style: none;
 }
 a {
-    text-decoration: none;
-    color: inherit; 
+    text-decoration: none; /* browser의 기본태그를 사용하지 않기 위한 지정 (예: 밑줄) */
+    color: inherit; /* a태그에 color 적용되지 않기 위한 사용 */
 }
 html{
-    width:100%;
+    width: 100%;
     height: 100%;
 }
 body {
+    background: #FFF;
     width: 100%;
     margin: 0 auto;
 }
-header{
+
+
+header {
     width: 100%;
     margin: 0 auto;
 }
-.coursemosLogo {
-    max-width: 1280px;    
-    width: 100%;
+header > nav { 
+    padding: 27px 0px;
+    display: flex;
+    justify-content: center;
+}
+header > nav > div {
+    width: 80%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center; /* 코스모스 로고 수직 중앙 정렬 */
     margin: 0 auto;
-    height: 81px;
+}
+header > nav > div > h1 {
+    width: 176px;
+    height: 26px;
+}
+header > nav > div > h1 > a {
+    background-image: url('css/image/logo.png');
+    background-repeat: no-repeat;
+    display: block; /* block설정 */
+    color: transparent; /* '코스모스' 글씨 안보이게 설정 */
+    content: " ";
+    width: 176px;
+    height: 26px;
+}
+header > nav > div > div {
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+    column-gap: calc(var(--navigation-height) / 2);
+    align-items: center;
+    gap: 43px;
+}
+header > nav > div > div > ul {
     display: flex; 
+    gap: 40px; /* li 사이의 간격 */
+    align-items: center;
+}
+header > nav > div > div > ul > li {
+
+}
+header > nav > div > div > ul > li > a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+header > nav > div > div > button {
+    background-image: url('/css/image/menu.png');
+    background-color: #FFF;
+    border: none;
+    width: 34px;
+    height: 34px; 
+    cursor: pointer;
+    position: relative;
+}
+@media (max-width: 980px) {
+    header > nav > div {
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    header > nav {
+        padding: 10px 0px;
+    }
+    header > nav > div > div > ul {
+        display: none;
+    }
+}
+
+/* header {
+    width: 100%;
+    margin: 0 auto;
+}
+header > nav {
+    margin: 0 auto;
+}
+header > nav > div {
+    display: flex;
+    height: 81px;
     justify-content: center;
     align-items: center;
 }
-.coursemosLogo > h1 > a {
+header > nav > h1 > a {
     display: inline-block; 
     background-image: url('css/image/logo.png');
     width: 176px;
     height: 26px;
 }
-.coursemosLogo > div.menubar > button {
-    background-image: url('/css/image/menu.png');
-    border:none;
-    width: 34px;
-    height: 34px;    
-}
-.menubar {
+header > nav > .menubar {
     display: flex;
     justify-content: flex-end;
     gap: 40px;
     align-items: center;
     margin-left: auto;    
+}
+header > nav > .menubar > button {
+    background-image: url('/css/image/menu.png');
+    border:none;
+    width: 34px;
+    height: 34px;    
 }
 .menubar > h3 {
     font-size: 24px;
@@ -78,7 +161,7 @@ div.menubar > h3.line {
     .menubar > h4 {
         display:none;
     }
-}
+} */
 .about {
     max-width: 1280px;
     width: 100%;
