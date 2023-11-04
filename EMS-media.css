@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
 }
 
-
+/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
 header {
     width: 100%;
     margin: 0 auto;
@@ -69,9 +69,6 @@ header > nav > div > div > ul {
     gap: 40px; /* li 사이의 간격 */
     align-items: center;
 }
-header > nav > div > div > ul > li {
-
-}
 header > nav > div > div > ul > li > a {
     color: #000;
     font-size: 16px;
@@ -102,76 +99,103 @@ header > nav > div > div > button {
     }
 }
 
-/* header {
-    width: 100%;
-    margin: 0 auto;
+/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
+main {
+    container-name: main;
+    container-type: inline-size;
 }
-header > nav {
-    margin: 0 auto;
-}
-header > nav > div {
+main > div[data-role="container"] {
+    container: container / inline-size;
     display: flex;
-    height: 81px;
-    justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    margin: 0 auto;
+    width: 80%;
+    height: 100px;
+    margin-top: clamp(50px, 10vw, 159px);
+    margin-bottom: 40px;
 }
-header > nav > h1 > a {
-    display: inline-block; 
-    background-image: url('css/image/logo.png');
-    width: 176px;
-    height: 26px;
+main > div[data-role="container"] > h2 {
+    color: #000;
+    font-size: clamp(56px, 7vw, 72px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px; 
+    flex-grow: 1;
 }
-header > nav > .menubar {
+main > div[data-role="container"] > nav {
+    flex-shrink: 0;
+}
+main > div[data-role="container"] > nav > ul {
     display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    align-items: center;
-    margin-left: auto;    
+    gap: 80px;
 }
-header > nav > .menubar > button {
-    background-image: url('/css/image/menu.png');
-    border:none;
-    width: 34px;
-    height: 34px;    
+main > div[data-role="container"] > nav > ul > li {
+    position: relative;
 }
-.menubar > h3 {
-    font-size: 24px;
+main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+    position: absolute;
+    top: 8px;
+    left: -40px;
+    width: 1px;
+    height: 16px;
+    background: #d9d9d9;
+    content: " ";
+}
+
+@media (max-width: 980px) {
+    main > div[data-role="container"] {
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    main > div[data-role="container"] {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}    
+@media (max-width: 680px) {
+    main > div[data-role="container"] {
+        display: block;
+        margin-top: 20px;
+    }
+    main > div[data-role="container"] > nav > ul {
+        gap: 50px;
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+    main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+        left: -25px;
+    }
+}
+@media (max-width: 400px) {
+    main > div[data-role="container"] {
+        margin-bottom: 100px;
+    }
+    main > div[data-role="container"] > h2 {
+        height: 100px;
+    }
+}
+main > div[data-role="container"] > nav > ul > li > a {
+    color: #B4B4B4;
+    font-size: clamp(16px, 2.3vw, 24px);
+    font-style: normal;
     font-weight: 700;
     line-height: 36px;
 }
-.menubar > h3.gray > a {
-    color: #b4b4b4;
-}
-.menubar > h3.black > a {
+main > div[data-role="container"] > nav > ul > li > a.selected {
     color: #222;
 }
-div.menubar > h3.line {
-    top: calc(50% - 8px);
-    left: calc(var(--navigation-height) / 2 * -1);
-    width: 1px;
-    height: 16px;
-    background: #D9D9D9;
-    content: " ";
-}
-@media(width < 810px) {
-    nav {
-        max-width: 768px;
-        display: inline-block;
-    }
-    .menubar > h4 {
-        display:none;
-    }
-} */
-.about {
+/* .about {
     max-width: 1280px;
     width: 100%;
     height: 81px;
     margin: 0 auto;
     height: 81px;
     margin-top: 240px;
-    display: flex; /* 수평 정렬 */
-    justify-content: center; /* 중앙정렬 */
-    align-items: center; /* 가운데 정렬 */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     padding-bottom: 40px;
 }
 .about > h1 {
@@ -219,7 +243,6 @@ div.menubar > h3.line {
         }
     }
 }
-/* Mobile 전용 : .about-menubar는 gap 줄여야함 */
 #main {
     width: 100%;
     height: clamp(480px, 56vw, 780px);
@@ -247,7 +270,7 @@ div.menubar > h3.line {
     display: flex;
     color: #FFF;
     justify-content: space-between;
-    padding-top: 310px; /* 반응형 */
+    padding-top: 310px; 
 }
 #main > .main-text > .main-sidetext > h4 {
     font-size: 28px;
@@ -264,7 +287,7 @@ div.menubar > h3.line {
 }
 @media (max-width: 1080px) {
     #main > .main-text > .main-sidetext > aside br {
-        display: none; /* <br> 태그 숨기기 */
+        display: none; 
     }
 }
 @media (max-width: 1280px) {
@@ -286,9 +309,9 @@ div.menubar > h3.line {
     #main > .main-text > .main-sidetext > h4 {
         margin-bottom: 5%;
     }
-}
+} */
 
-header > .mainContainer {
+/* header > .mainContainer {
     background: url("/css/image/main.png") no-repeat center center;
     background-size: cover;
     width: 100%;
@@ -375,11 +398,9 @@ header > .mainContainer {
     content: "COURSEMOS";
     font-size: 12px;
     top: 121px;
-    /* left: 227px; */
     width: 80px;
     height: 24px;
-    /* line-height: 24px; */
-    transform: rotate(90deg); /* 90도 회전 */
+    transform: rotate(90deg);
     font-weight: 700;
     color: #fff;
     transform-origin: top left;
@@ -437,7 +458,7 @@ header > .mainContainer {
     font-weight: 700;
     line-height: 42px;
     opacity: 0.7;
-}
+} */
 
 #expand {
     width: 80vw;
