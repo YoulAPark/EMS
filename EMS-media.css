@@ -98,8 +98,6 @@ header > nav > div > div > button {
         display: none;
     }
 }
-
-/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
 main {
     container-name: main;
     container-type: inline-size;
@@ -141,7 +139,16 @@ main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))
     background: #d9d9d9;
     content: " ";
 }
-
+main > div[data-role="container"] > nav > ul > li > a {
+    color: #B4B4B4;
+    font-size: clamp(16px, 2.3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+main > div[data-role="container"] > nav > ul > li > a.selected {
+    color: #222;
+}
 @media (max-width: 980px) {
     main > div[data-role="container"] {
         width: 90%;
@@ -176,140 +183,8 @@ main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))
         height: 100px;
     }
 }
-main > div[data-role="container"] > nav > ul > li > a {
-    color: #B4B4B4;
-    font-size: clamp(16px, 2.3vw, 24px);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-}
-main > div[data-role="container"] > nav > ul > li > a.selected {
-    color: #222;
-}
-/* .about {
-    max-width: 1280px;
-    width: 100%;
-    height: 81px;
-    margin: 0 auto;
-    height: 81px;
-    margin-top: 240px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    padding-bottom: 40px;
-}
-.about > h1 {
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 100px;
-}
-.about > .about-menubar {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    align-items: center;
-    margin-left: auto;  
-}
-.about-menubar > h3 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-}
-.about-menubar > h3.gray > a {
-    color: #b4b4b4;
-}
-.about-menubar > h3.black > a {
-    color: #222;
-}
-@media(max-width: 810px) {
-    .about {
-        height: 100%;
-        margin: 0 auto;
-        margin-top: 40px;
-        display: block;
-        padding-left: 30px;
-        padding-right: 30px;
-        > h1 { 
-            font-size: 11vw;
-        }
-        > .about-menubar {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            gap: 40px;
-            font-size: 30px;
-        }
-    }
-}
-#main {
-    width: 100%;
-    height: clamp(480px, 56vw, 780px);
-    background-image: url('/css/image/main.png');
-    background-size: cover;
-    background-position: 50% 50%;
-}
-#main > .main-text {
-    width: 1280px;
-    height: 670px;
-    padding-top: 110px;
-    margin: 0 auto;
-    @media (max-width: 1390px) {
-        width: 90%;
-    }
-}
-#main > .main-text > h2 {
-    color: #FFF;
-    font-size: 46px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 60px;
-}
-#main > .main-text > .main-sidetext {
-    display: flex;
-    color: #FFF;
-    justify-content: space-between;
-    padding-top: 310px; 
-}
-#main > .main-text > .main-sidetext > h4 {
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 42px;
-}
-#main > .main-text > .main-sidetext > aside {
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 42px;
-    opacity: 0.7;
-}
-@media (max-width: 1080px) {
-    #main > .main-text > .main-sidetext > aside br {
-        display: none; 
-    }
-}
-@media (max-width: 1280px) {
-    #main > .main-text > .main-sidetext {
-        padding-top: 25%;
-    }
-}
-@media (max-width: 1080px) {
-    #main > .main-text {
-        padding-top: 10%;
-    }
-    #main > .main-text > .main-sidetext {
-        padding-top: 10%;
-        display: block;
-    }
-    #main > .main-text > .main-sidetext aside br {
-        display: none;
-    }
-    #main > .main-text > .main-sidetext > h4 {
-        margin-bottom: 5%;
-    }
-} */
+/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
+
 
 /* header > .mainContainer {
     background: url("/css/image/main.png") no-repeat center center;
