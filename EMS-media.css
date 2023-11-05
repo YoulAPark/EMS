@@ -612,6 +612,31 @@ section[data-role="tools"] > div[data-role="container"].tool > ul > li > p {
         padding: 6px 0px 16px 0px;
     }
 }
+@media(max-width: 550px){
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: block;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 29px;
+        font-weight: 700;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 21px;
+        line-height: 30px;
+        word-break: keep-all;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li {
+        padding-bottom: 40px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > i {
+        margin: 0px;
+    }
+}
 /*  */
 
 /* footer 작성 */
