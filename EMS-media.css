@@ -348,7 +348,6 @@ main > div[data-role="content"] > section[data-role="block"] > div[data-role="co
 }
 
 main > div[data-role="content"] > section[data-role="block"].features {
-    background: salmon;
     padding-top: 160px;
     padding-bottom: 160px;
     width: 100%;
