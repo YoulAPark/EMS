@@ -347,6 +347,116 @@ main > div[data-role="content"] > section[data-role="block"] > div[data-role="co
     }
 }
 
+main > div[data-role="content"] > section[data-role="block"].features {
+    background: salmon;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    width: 100%;
+}
+main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+section[data-role="block"].features > div[data-role="container"] > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px 160px;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li {
+    position: relative;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > b{
+    color: #222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    top: 30px;
+    right: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-1 {
+    background-image: url('css/image/card-1.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-2 {
+    background-image: url('css/image/card-2.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-3 {
+    background-image: url('css/image/card-3.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-4 {
+    background-image: url('css/image/card-4.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-5 {
+    background-image: url('css/image/card-5.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-6 {
+    background-image: url('css/image/card-6.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-7 {
+    background-image: url('css/image/card-7.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > p {
+    padding-top: 96px;
+    padding-left: 70px;
+    color: #6f6f6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    word-break: keep-all;
+}
+@media (max-width: 1280px) {
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul {
+        gap: 100px 100px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > b{
+        font-size: 26px;
+        line-height: 35px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > p {
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+@media (max-width: 980px) {
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-bottom: 40px;
+    }
+    main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    section[data-role="block"].features > div[data-role="container"] > ul {
+        display: block;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li {
+        position: relative;
+        padding-bottom: 90px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > i {
+        top: 30px;
+        right: 8px;
+    }
+}  
+
+
+
+/*  */
 
 
 #dashboard {
