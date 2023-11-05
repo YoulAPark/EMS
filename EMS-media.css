@@ -301,7 +301,7 @@ main > div[data-role="content"] > section[data-role="cover"] > div[data-role="co
     }
 }
 
-/* main > div[data-role="content"] > section[data-role="block"] {
+main > div[data-role="content"] > section[data-role="block"] {
     padding-top: 160px;
     padding-bottom: 120px;
     width: 100%;
@@ -319,6 +319,7 @@ main > div[data-role="content"] > section[data-role="block"] > div[data-role="co
     font-weight: 500;
     line-height: 60px;
     padding-bottom: 40px;
+    word-break: keep-all
 }
 main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 > span {
     color: var(--text-100, #B4B4B4);
@@ -326,78 +327,27 @@ main > div[data-role="content"] > section[data-role="block"] > div[data-role="co
     font-style: normal;
     font-weight: 500;
     line-height: 60px;
-}
-@media (max-width: 1400px) {
-}
-@media (max-width: 1280px) {
-    main > div[data-role="content"] > section[data-role="block"] {
-        padding-top: 160px;
-    }
+    word-break: keep-all
 }
 @media (max-width: 980px) {
+    main > div[data-role="content"] > section[data-role="block"] {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
     main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] {
         width: 90%;
     }
+    main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 {
+        font-size: 32px;
+        line-height: 43px;
+    }
+    main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 > span {
+        font-size: 32px;
+        line-height: 43px;
+    }
 }
-@media (max-width: 760px) {
-}    
-@media (max-width: 680px) {
-} */
 
-#expand {
-    width: 80vw;
-    margin: 0 auto;
-    display: flex;
-    align-items: center; /* 세로 방향 중앙 정렬 */
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    > div.expand-main {
-        padding-top: 160px;
-        padding-bottom: 160px;
-        > div {
-            padding-bottom: 40px;
-        }
-        > div > h4 {
-            color: #222;
-            font-size: 46px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.25;
-            > span {
-                color: #b4b4b4;
-                font-size: 46px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 1.25;
-            }
-        }
-    }
-}
-@media(width < 1024px) {
 
-}
-@media (max-width: 810px) {
-    #expand {
-        width: 90vw;
-        margin: 0 auto;
-    }
-    #expand > div.expand-main {
-        padding: 119px 0px 100px 0px;
-    }
-    #expand > div > h4 {
-        color: #222;
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.25; 
-        > span {
-            color: #b4b4b4;
-            font-size: 2rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.25;
-        }
-    }
-}
 
 #dashboard {
     width: 100%;
