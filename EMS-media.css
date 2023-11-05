@@ -467,8 +467,6 @@ section[data-role="dashboard"] > div[data-role="container"].ems {
     height: 400px;
     max-width: 1280px;
 }
-@media (max-width: 980px) {
-}
 @media (max-width: 760px) {
     section[data-role="dashboard"] {
         padding-top: 0px;
@@ -492,20 +490,128 @@ section[data-role="dashboard"] > div[data-role="container"].ems {
 
 
 /*  */
-main > div[data-role="content"] > section[data-role="block"].features {
+main > div[data-role="content"] > section[data-role="tools"] {
     padding-top: 160px;
     padding-bottom: 160px;
-    width: 100%;
 }
-main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+section[data-role="tools"] > div[data-role="container"].tool {
+    container: container / inline-size;
+    margin: 0 auto;
     width: 80%;
     max-width: 1280px;
-    margin: 0 auto;
 }
-main > div[data-role="content"] > section[data-role="tools"] {
-    
+section[data-role="tools"] > div[data-role="container"].tool > h4 {
+    padding-bottom: 40px;
+    color: #222;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
 }
- 
+section[data-role="tools"] > div[data-role="container"].tool > p {
+    padding-bottom: 60px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 15px 0px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;    
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-1 {
+    background-image: url('css/image/main-bottom-card1.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-2 {
+    background-image: url('css/image/main-bottom-card2.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-3 {
+    background-image: url('css/image/main-bottom-card3.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-4 {
+    background-image: url('css/image/main-bottom-card4.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-5 {
+    background-image: url('css/image/main-bottom-card5.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+    display: block;
+    padding: 16px 0px 24px 0px;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    white-space: nowrap;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > p {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+@media(max-width: 980px){
+    main > div[data-role="content"] > section[data-role="tools"] {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool {
+        width: 90%;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 40px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 26px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+}
+@media(max-width: 760px){
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+@media(max-width: 680px){
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 35px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 21px;
+        line-height: 30px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+}
 /*  */
 
 /* footer 작성 */
