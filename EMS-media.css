@@ -452,142 +452,61 @@ section[data-role="block"].features > div[data-role="container"] > ul > li > p {
         right: 8px;
     }
 }  
-
+section[data-role="dashboard"] {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    background: #0075F8;
+}
+section[data-role="dashboard"] > div[data-role="container"].ems {
+    margin: 0 auto;
+    background-image: url(css/image/bottomImg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    width: 100%;
+    height: 400px;
+    max-width: 1280px;
+}
+@media (max-width: 980px) {
+}
+@media (max-width: 760px) {
+    section[data-role="dashboard"] {
+        padding-top: 0px;
+    }
+}    
+@media (max-width: 680px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 350px;
+    }
+}
+@media (max-width: 560px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 310px;
+    }
+}
+@media (max-width: 450px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 200px;
+    }
+}
 
 
 /*  */
-
-
-#dashboard {
-    width: 100%;
+main > div[data-role="content"] > section[data-role="block"].features {
     padding-top: 160px;
     padding-bottom: 160px;
-  }
-  #dashboard > .container {
-    width: 1280px;
+    width: 100%;
+}
+main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+    width: 80%;
+    max-width: 1280px;
     margin: 0 auto;
-  }
-  #dashboard > .container> .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 140px;
-  }
-  @media(max-width: 1300px) {
-    #dashboard {
-        padding-top: 0px;
-        padding-bottom: 100px;
-    }
-    #dashboard > .container {
-        width: 100%;
-    }
-    #dashboard > .container> .card {
-        gap: 90px;
-    }
-  }
-  #dashboard > .container> .card > div {
-    position: relative;
-  }
-  #dashboard > .container> .card > div > b {
-    color: #222;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 42px;     
-  }
-  #dashboard > .container> .card > div > i {
-    width: 120px;
-    height: 120px;
-    right: 0px;
-    top: 0px;
-    margin: 0 30px;
-    position: absolute;
-  }
-  #dashboard > .container> .card > div > i.image-1 {
+}
+main > div[data-role="content"] > section[data-role="tools"] {
     
-    background-image: url('css/image/card-1.png');
-    background-repeat: no-repeat;
-  }
-  #dashboard > .container> .card > div > p {
-    color: #6f6f6f;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    padding-top: 23%;
-    padding-left: 18%;
-  }
-   @media(max-width: 970px) {
-    #dashboard > .container {
-        width: 80%;
-    }
-    #dashboard > .container> .card {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 100px;
-    }
-    #dashboard > .container> .card > div > i {
-        width: 120px;
-        height: 120px;
-        right: 0px;
-        top: 0px;
-        margin: 7% 0%;
-        position: absolute;
-    }
-  }
-
-.item > i.image-1 {
-    display: block;
-    background-image: url('css/image/card-1.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
 }
-.item > i.image-2 {
-    display: block;
-    background-image: url('css/image/card-2.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.item > i.image-3 {
-    display: block;
-    background-image: url('css/image/card-3.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.item > i.image-4 {
-    display: block;
-    background-image: url('css/image/card-4.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.item > i.image-5 {
-    display: block;
-    background-image: url('css/image/card-5.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.item > i.image-6 {
-    display: block;
-    background-image: url('css/image/card-6.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.item > i.image-7 {
-    display: block;
-    background-image: url('css/image/card-7.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
+ 
+/*  */
 
 /* footer 작성 */
 footer {
