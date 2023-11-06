@@ -701,8 +701,158 @@ footer > div[data-role="container"] > ul > li > ul {
 footer > div[data-role="container"] > ul > li > ul > li {
     flex-grow: 0;
     flex-shrink: 0;
+    color: #6F6F6F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
 }
 footer > div[data-role="container"] > ul > li > ul > li > a {
     display: block;
     width: fit-content;
+}
+footer > div.line {
+    background-color: #222;
+    width: 100%;
+    height: 1px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+footer > div[data-role="container"] > h4 {
+    background-image: url('css/image/footer-coursemos-logo.png');
+    background-repeat: no-repeat;
+    display: block; /* block설정 */
+    color: transparent; /* '코스모스' 글씨 안보이게 설정 */
+    content: " ";
+    width: 175.635px;
+    height: 26px;
+}
+footer > div[data-role="container"] > div {
+    display: flex;
+    justify-content: space-between;
+}
+footer > div[data-role="container"] > div > div.left > b {
+    display: flex;
+    padding-top: 24px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+footer > div[data-role="container"] > div > div.left > address {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+footer > div[data-role="container"] > div > div.left > small {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+footer > div[data-role="container"] > div > div.address > b {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    display: block;
+    padding-top: 24px;
+}
+footer > div[data-role="container"] > div > div.address > tel {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; 
+}
+footer > div[data-role="container"] > div > div.address > a {
+    display: block;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+@media(max-width: 980px) {
+    footer > div[data-role="container"] {
+        width: 90%;
+    }
+}
+@media(max-width: 780px) {
+    footer {
+        padding: 60px 0px 66px 0px;
+    }
+    footer > div[data-role="container"] > ul.nav {
+        flex-wrap: wrap;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul {
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 50px;
+    } 
+}
+@media(max-width: 625px) {
+    footer {
+        padding: 30px 0px 36px 0px;
+    }
+    footer > div[data-role="container"] {
+        margin: 0 auto;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul > li {
+        font-size: 14px;
+    }
+    footer > div[data-role="container"] > ul > li > b {
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+    footer > div[data-role="container"] > ul > li > ul {
+        gap: 3px;
+    }
+    footer > div[data-role="container"] > ul > li > ul > li {
+        font-size: 14px;
+        font-weight: 500;
+    }
+@media(max-width: 570px) {
+    footer > div[data-role="container"] > div {
+        display: contents;
+    }
+    footer > div[data-role="container"] > div > div.address > b {
+        padding-top: 60px;
+    }
+}
+@media(max-width: 480px) {
+    footer > div[data-role="container"] > ul.nav {
+        display: block;
+    }
+    footer > div[data-role="container"] > ul > li {
+        padding-bottom: 30px;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul {
+        flex-direction: column;
+        gap: 3px;
+    }
+    footer > div[data-role="container"] > ul > li > b {
+        padding-bottom: 0px;
+        font-size: 18px;
+    }
+    footer > div[data-role="container"] > ul > li > ul {
+        gap: 0px;
+    }
+    footer > div[data-role="container"] > ul > li > ul > li {
+        font-size: 12px;
+    }
+    footer > div.line {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
