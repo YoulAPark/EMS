@@ -176,10 +176,16 @@ main > div[data-role="container"] > nav > ul > li > a.selected {
 }
 @media (max-width: 400px) {
     main > div[data-role="container"] {
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
     main > div[data-role="container"] > h2 {
         height: 100px;
+    }
+    main > div[data-role="container"] > nav > ul {
+        gap: 33px;
+    }
+    main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+        left: -18px;
     }
 }
 main > div[data-role="content"] {
@@ -447,6 +453,15 @@ section[data-role="block"].features > div[data-role="container"] > ul > li > p {
         right: 8px;
     }
 }  
+@media (max-width: 420px) {
+    main > div[data-role="content"] > section[data-role="block"] {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-top: 0px;
+    }
+}
 section[data-role="dashboard"] {
     padding-top: 30px;
     padding-bottom: 0px;
