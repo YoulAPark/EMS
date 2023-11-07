@@ -20,8 +20,6 @@ body {
     width: 100%;
     margin: 0 auto;
 }
-
-/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
 header {
     width: 100%;
     margin: 0 auto;
@@ -184,9 +182,6 @@ main > div[data-role="container"] > nav > ul > li > a.selected {
         height: 100px;
     }
 }
-/* ############# 2023년 11월 5일 header/nav 미디어쿼리까지 완성 ############# */
-
-
 main > div[data-role="content"] {
     container: container / inline-size;
 }
@@ -488,8 +483,6 @@ section[data-role="dashboard"] > div[data-role="container"].ems {
     }
 }
 
-
-/*  */
 main > div[data-role="content"] > section[data-role="tools"] {
     padding-top: 160px;
     padding-bottom: 160px;
@@ -637,8 +630,6 @@ section[data-role="tools"] > div[data-role="container"].tool > ul > li > p {
         margin: 0px;
     }
 }
-
-
 footer {
     background-color: #000;
     padding: 120px 0px 126px 0px;
