@@ -1,0 +1,948 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    /* font-size:clamp(12px, 1.1429vw, 20px); 기본 폰트 사이즈 지정하는 방식 clamp(최소폰트, vw적용, 최대폰트) */
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none; /* browser의 기본태그를 사용하지 않기 위한 지정 (예: 밑줄) */
+    color: inherit; /* a태그에 color 적용되지 않기 위한 사용 */
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: #FFF;
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    margin: 0 auto;
+
+    > nav { 
+        padding: 27px 0px;
+        display: flex;
+        justify-content: center;
+
+        > div {
+            width: 80%;
+            max-width: 1280px;
+            display: flex;
+            align-items: center; /* 코스모스 로고 수직 중앙 정렬 */
+            margin: 0 auto;
+        }
+    }
+}
+header > nav > div > h1 {
+    width: 176px;
+    height: 26px;
+}
+header > nav > div > h1 > a {
+    background-image: url('css/image/logo.png');
+    background-repeat: no-repeat;
+    display: block; /* block설정 */
+    color: transparent; /* '코스모스' 글씨 안보이게 설정 */
+    content: " ";
+    width: 176px;
+    height: 26px;
+}
+header > nav > div > div {
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+    column-gap: calc(var(--navigation-height) / 2);
+    align-items: center;
+    gap: 43px;
+}
+
+--main-color:blue;
+
+background-color:var(--main-color);
+
+header > nav > div > div > ul {
+    display: flex; 
+    gap: 40px; /* li 사이의 간격 */
+    align-items: center;
+}
+header > nav > div > div > ul > li > a {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header {
+    > nav {
+        > div {
+
+
+            > div {
+                > button {
+                    > i {
+
+                    }
+                }
+            }
+        }
+    }
+
+    > nav > div > div > button {
+        > a {
+            
+        }
+    }
+}
+
+header > nav > div {
+    > div {
+        > button {
+            > a {
+                > i {
+
+                }
+            }
+        }
+    }
+}
+
+header 
+
+header > nav > div > div > button {
+    > i {
+
+    }
+    background-image: url('/css/image/menu.png');
+    background-color: #FFF;
+    border: none;
+    width: 34px;
+    height: 34px; 
+    cursor: pointer;
+    position: relative;
+}
+
+
+@media (min-width:400px) and (max-width: 980px) {
+    header > nav > div {
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    header > nav {
+        padding: 10px 0px;
+    }
+    header > nav > div > div > ul {
+        display: none;
+    }
+}
+main {
+    container-name: main;
+    container-type: inline-size;
+}
+main > div[data-role="container"] {
+    container: container / inline-size;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+    width: 80%;
+    height: 100px;
+    max-width: 1280px;
+    margin-top: clamp(50px, 10vw, 159px);
+    margin-bottom: 40px;
+}
+main > div[data-role="container"] > h2 {
+    color: #000;
+    font-size: clamp(56px, 7vw, 72px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px; 
+    flex-grow: 1;
+}
+main > div[data-role="container"] > nav {
+    flex-shrink: 0;
+}
+main > div[data-role="container"] > nav > ul {
+    display: flex;
+    gap: 80px;
+}
+main > div[data-role="container"] > nav > ul > li {
+    position: relative;
+}
+main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+    position: absolute;
+    top: 8px;
+    left: -40px;
+    width: 1px;
+    height: 16px;
+    background: #d9d9d9;
+    content: " ";
+}
+main > div[data-role="container"] > nav > ul > li > a {
+    color: #B4B4B4;
+    font-size: clamp(16px, 2.3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+main > div[data-role="container"] > nav > ul > li > a.selected {
+    color: #222;
+}
+@media (max-width: 980px) {
+    main > div[data-role="container"] {
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    main > div[data-role="container"] {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}    
+@media (max-width: 680px) {
+    main > div[data-role="container"] {
+        display: block;
+        margin-top: 20px;
+    }
+    main > div[data-role="container"] > nav > ul {
+        gap: 50px;
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+    main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+        left: -25px;
+    }
+}
+@media (max-width: 400px) {
+    main > div[data-role="container"] {
+        margin-bottom: 70px;
+    }
+    main > div[data-role="container"] > h2 {
+        height: 100px;
+    }
+    main > div[data-role="container"] > nav > ul {
+        gap: 33px;
+    }
+    main > div[data-role="container"] > nav > ul > li:not(:has(a[href="/EMS.html"]))::after {
+        left: -18px;
+    }
+}
+main > div[data-role="content"] {
+    container: container / inline-size;
+}
+main > div[data-role="content"] > section[data-role="cover"] {
+    background-image: url('/css/image/main.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: clamp(480px, 56vw, 780px);
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    container: container / inline-size;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%; 
+    max-width: 1280px;
+    padding-top: 110px;
+    padding-bottom: 156px;
+    justify-content: space-between;
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"]::before {
+    position: absolute;
+    content: "COURSEMOS";
+    transform: rotate(90deg);
+    transform-origin: top left;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    top: 121px;
+    left: -69px;
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"]::after {
+    position: absolute;
+    content: " ";
+    width: 1px;
+    height: 57%;
+    background: rgba(255, 255, 255, 0.6);
+    left: -80px;
+    bottom: 120px;
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > h3 {
+    color: var(--neutrals-white, #FFF);
+    font-size: clamp(32px, 8vw, 46px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; 
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > small {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-top: 51px;
+    flex-shrink: 0;
+    color: var(--neutrals-white, #FFF);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > small > aside {
+    color: var(--neutrals-white, #FFF);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    opacity: 0.7;
+}
+@media (max-width: 1400px) {
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"]::after {
+        height: 30vw;
+        bottom: 17%;
+    }
+}
+@media (max-width: 1280px) {
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] {
+        padding-top: 60px;
+        padding-bottom : 50px;
+    }
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"]::before {
+        display: none;
+    }
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"]::after {
+        display: none;
+    }
+}
+@media (max-width: 980px) {
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] {
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > small {
+        display: contents;
+        font-size: clamp(23px, 3vw, 28px);
+    }
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > small > aside {
+        font-size: clamp(23px, 3vw, 28px);
+    }
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] > small > aside br {
+        display: none;
+    }
+}    
+@media (max-width: 680px) {
+    main > div[data-role="content"] > section[data-role="cover"] > div[data-role="container"] {
+        padding-top: 95px;
+        padding-bottom: 92px;
+    }
+}
+
+main > div[data-role="content"] > section[data-role="block"] {
+    padding-top: 160px;
+    padding-bottom: 120px;
+    width: 100%;
+    container: container / inline-size;
+}
+main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"]{
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 {
+    color: var(--text-400, #222);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    padding-bottom: 40px;
+    word-break: keep-all
+}
+main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 > span {
+    color: var(--text-100, #B4B4B4);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    word-break: keep-all
+}
+@media (max-width: 980px) {
+    main > div[data-role="content"] > section[data-role="block"] {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] {
+        width: 90%;
+    }
+    main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 {
+        font-size: 32px;
+        line-height: 43px;
+    }
+    main > div[data-role="content"] > section[data-role="block"] > div[data-role="container"] > h4 > span {
+        font-size: 32px;
+        line-height: 43px;
+    }
+}
+
+main > div[data-role="content"] > section[data-role="block"].features {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    width: 100%;
+}
+main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+section[data-role="block"].features > div[data-role="container"] > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px 160px;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li {
+    position: relative;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > b{
+    color: #222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    top: 30px;
+    right: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-1 {
+    background-image: url('css/image/card-1.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-2 {
+    background-image: url('css/image/card-2.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-3 {
+    background-image: url('css/image/card-3.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-4 {
+    background-image: url('css/image/card-4.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-5 {
+    background-image: url('css/image/card-5.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-6 {
+    background-image: url('css/image/card-6.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > i.image-7 {
+    background-image: url('css/image/card-7.png');
+}
+section[data-role="block"].features > div[data-role="container"] > ul > li > p {
+    padding-top: 96px;
+    padding-left: 70px;
+    color: #6f6f6f;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    word-break: keep-all;
+}
+@media (max-width: 1280px) {
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul {
+        gap: 100px 100px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > b{
+        font-size: 26px;
+        line-height: 35px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > p {
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+@media (max-width: 980px) {
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-bottom: 40px;
+    }
+    main > div[data-role="content"] > section[data-role="block"].features > div[data-role="container"]{
+        width: 90%;
+    }
+}
+@media (max-width: 760px) {
+    section[data-role="block"].features > div[data-role="container"] > ul {
+        display: block;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li {
+        position: relative;
+        padding-bottom: 90px;
+    }
+    section[data-role="block"].features > div[data-role="container"] > ul > li > i {
+        top: 30px;
+        right: 8px;
+    }
+}  
+@media (max-width: 420px) {
+    main > div[data-role="content"] > section[data-role="block"] {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    main > div[data-role="content"] > section[data-role="block"].features {
+        padding-top: 0px;
+    }
+}
+section[data-role="dashboard"] {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    background: #0075F8;
+}
+section[data-role="dashboard"] > div[data-role="container"].ems {
+    margin: 0 auto;
+    background-image: url(css/image/bottomImg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    width: 100%;
+    height: 400px;
+    max-width: 1280px;
+}
+@media (max-width: 760px) {
+    section[data-role="dashboard"] {
+        padding-top: 0px;
+    }
+}    
+@media (max-width: 680px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 350px;
+    }
+}
+@media (max-width: 560px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 310px;
+    }
+}
+@media (max-width: 450px) {
+    section[data-role="dashboard"] > div[data-role="container"].ems {
+        height: 200px;
+    }
+}
+
+main > div[data-role="content"] > section[data-role="tools"] {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+section[data-role="tools"] > div[data-role="container"].tool {
+    container: container / inline-size;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > h4 {
+    padding-bottom: 40px;
+    color: #222;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > p {
+    padding-bottom: 60px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 15px 0px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;    
+}
+
+button[disabled] {
+
+}
+
+button:hover {
+    border-color:red;
+}
+
+button:focus {
+    border-color:blue;
+}
+
+section[data-role="tools"] > div[data-role="container"].tool > ul > li:nth-child(2) {
+    > i {
+
+    }
+}
+
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-1 {
+    background-image: url('css/image/main-bottom-card1.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-2 {
+    background-image: url('css/image/main-bottom-card2.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-3 {
+    background-image: url('css/image/main-bottom-card3.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-4 {
+    background-image: url('css/image/main-bottom-card4.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > i.card-5 {
+    background-image: url('css/image/main-bottom-card5.png');
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+    display: block;
+    padding: 16px 0px 24px 0px;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    white-space: nowrap;
+}
+section[data-role="tools"] > div[data-role="container"].tool > ul > li > p {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+@media(max-width: 980px){
+    main > div[data-role="content"] > section[data-role="tools"] {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool {
+        width: 90%;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 40px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 26px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+}
+@media(max-width: 760px){
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+@media(max-width: 680px){
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 35px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 21px;
+        line-height: 30px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+}
+@media(max-width: 550px){
+    section[data-role="tools"] > div[data-role="container"].tool > ul {
+        display: block;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > h4 {
+        padding-bottom: 25px;
+        font-size: 29px;
+        font-weight: 700;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > p {
+        padding-bottom: 20px;
+        font-size: 21px;
+        line-height: 30px;
+        word-break: keep-all;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li {
+        padding-bottom: 40px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > b {
+        padding: 6px 0px 16px 0px;
+    }
+    section[data-role="tools"] > div[data-role="container"].tool > ul > li > i {
+        margin: 0px;
+    }
+}
+footer {
+    background-color: #000;
+    padding: 120px 0px 126px 0px;
+    color: white;
+}
+footer > div[data-role="container"] {
+    margin: 0 auto;
+    container: container / inline-size;
+    width: 80%;
+    max-width: 1280px;
+}
+footer > div[data-role="container"] > ul.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 49px;
+}
+footer > div[data-role="container"] > ul > li.introduce {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+footer > div[data-role="container"] > ul > li.introduce > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+footer > div[data-role="container"] > ul > li.introduce > ul > li {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+footer > div[data-role="container"] > ul > li.introduce > ul > li > a[target]::after {
+    position: absolute;
+    content: " ";
+    background-image: url('css/image/footer-top-icon.png');
+    width: 24px;
+    height: 24px;
+}
+footer > div[data-role="container"] > ul > li {
+    flex-shrink: 0;
+}
+footer > div[data-role="container"] > ul > li > b {
+    display:block;
+    padding-bottom: 24px;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
+}
+footer > div[data-role="container"] > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+footer > div[data-role="container"] > ul > li > ul > li {
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: #6F6F6F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
+}
+footer > div[data-role="container"] > ul > li > ul > li > a {
+    display: block;
+    width: fit-content;
+}
+footer > div.line {
+    background-color: #222;
+    width: 100%;
+    height: 1px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+footer > div[data-role="container"] > h4 {
+    background-image: url('css/image/footer-coursemos-logo.png');
+    background-repeat: no-repeat;
+    display: block; /* block설정 */
+    color: transparent; /* '코스모스' 글씨 안보이게 설정 */
+    content: " ";
+    width: 175.635px;
+    height: 26px;
+}
+footer > div[data-role="container"] > div {
+    display: flex;
+    justify-content: space-between;
+}
+footer > div[data-role="container"] > div > div.left > b {
+    display: flex;
+    padding-top: 24px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+footer > div[data-role="container"] > div > div.left > address {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+}
+footer > div[data-role="container"] > div > div.left > small {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+footer > div[data-role="container"] > div > div.address > b {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    display: block;
+    padding-top: 24px;
+}
+footer > div[data-role="container"] > div > div.address > tel {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; 
+}
+footer > div[data-role="container"] > div > div.address > a {
+    display: block;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+@media(max-width: 980px) {
+    footer > div[data-role="container"] {
+        width: 90%;
+    }
+}
+@media(max-width: 780px) {
+    footer {
+        padding: 60px 0px 66px 0px;
+    }
+    footer > div[data-role="container"] > ul.nav {
+        flex-wrap: wrap;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul {
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 50px;
+    } 
+}
+@media(max-width: 625px) {
+    footer {
+        padding: 30px 0px 36px 0px;
+    }
+    footer > div[data-role="container"] {
+        margin: 0 auto;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul > li {
+        font-size: 14px;
+    }
+    footer > div[data-role="container"] > ul > li > b {
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+    footer > div[data-role="container"] > ul > li > ul {
+        gap: 3px;
+    }
+    footer > div[data-role="container"] > ul > li > ul > li {
+        font-size: 14px;
+        font-weight: 500;
+    }
+@media(max-width: 570px) {
+    footer > div[data-role="container"] > div {
+        display: contents;
+    }
+    footer > div[data-role="container"] > div > div.address > b {
+        padding-top: 60px;
+    }
+}
+@media(max-width: 480px) {
+    footer > div[data-role="container"] > ul.nav {
+        display: block;
+    }
+    footer > div[data-role="container"] > ul > li {
+        padding-bottom: 30px;
+    }
+    footer > div[data-role="container"] > ul > li.introduce > ul {
+        flex-direction: column;
+        gap: 3px;
+    }
+    footer > div[data-role="container"] > ul > li > b {
+        padding-bottom: 0px;
+        font-size: 18px;
+    }
+    footer > div[data-role="container"] > ul > li > ul {
+        gap: 0px;
+    }
+    footer > div[data-role="container"] > ul > li > ul > li {
+        font-size: 12px;
+    }
+    footer > div.line {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (width < 500px) {
+    main {
+        > nav {
+
+        }
+    }
+}
+
+@media (width < 300px) {
+    main {
+        > nav {
+            
+        }
+    }
+}

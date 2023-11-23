@@ -1,0 +1,134 @@
+*.scss
+
+
+main > h1 > a {
+
+}
+
+main > h1 > span {
+
+}
+
+
+<main>
+    <ul>
+        <li><a>aa</a></li>
+    </ul>
+    <a>bb</a>
+</main>
+
+main a {
+
+}
+
+main > a {
+
+}
+
+main {
+    &a {
+
+    }
+
+    > a {
+
+    }
+}
+
+main.container {
+    color:red;
+}
+
+main {
+    &.container {
+        color:red;
+    }
+
+
+}
+
+main {
+    color:blue;
+}
+
+main[data-role=container] {
+    color:black;
+}
+
+main[data-role=container] > a {
+    color:red;
+}
+
+main[data-role=container].small > a {
+    color:green;
+}
+
+main[data-role=container].small > a::after {
+
+}
+
+<main>
+    <a>a</a>
+    <a>b</a>
+    <a>c</a>
+    <span>aaa</span>
+</main>
+
+main > a {
+    padding-left:10px;
+
+    &:first-child {
+        padding-left:0;
+    }
+}
+
+main {
+    > a + a {
+        padding-left:10px;
+    }
+}
+
+main > a + span {
+    padding-left:20px;
+}
+
+main {
+    &a {
+
+    }
+
+    color:blue;
+
+    &[data-role=container] {
+        color:black;
+    
+        > a {
+            color:red;
+        }
+
+        &.small {
+            > a {
+                &:not() {
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+main {
+    > h1 {
+        > a {
+
+        }
+
+        > span {
+
+        }
+    }
+}
