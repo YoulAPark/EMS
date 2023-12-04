@@ -1,5 +1,3 @@
-*.scss
-
 
 main > h1 > a {
 
@@ -8,7 +6,6 @@ main > h1 > a {
 main > h1 > span {
 
 }
-
 
 <main>
     <ul>
@@ -29,7 +26,6 @@ main {
     &a {
 
     }
-
     > a {
 
     }
@@ -43,8 +39,6 @@ main {
     &.container {
         color:red;
     }
-
-
 }
 
 main {
